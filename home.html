@@ -17,7 +17,7 @@
       <div class="mockup-phone">
         <div class="camera"></div>
         <div class="display">
-          <div class="artboard artboard-demo phone-3">
+          <div class="artboard artboard-demo phone-3 justify-start py-10">
             <!-- available balance -->
             <div>
               <div class="stats shadow">
@@ -29,12 +29,15 @@
             </div>
             <div class="divider"></div>
             <!-- user action buttons -->
-            <div>
+            <div class="flex gap-1">
               <button id="btn-show-add-money" class="btn btn-lg">
                 Add Money
               </button>
               <button id="btn-show-cash-out" class="btn btn-lg">
                 Cash Out
+              </button>
+              <button id="btn-show-transactions" class="btn btn-lg">
+                Transactions
               </button>
             </div>
             <div class="divider"></div>
@@ -116,6 +119,11 @@
               </form>
             </div>
             <!-- cash out end -->
+
+            <!-- Transactions section started -->
+            <div id="history-container">
+              <h2 class="text-2xl font-bold">Transaction History</h2>
+            </div>
           </div>
         </div>
       </div>

@@ -31,3 +31,19 @@ function getElementNumber(id) {
 //২-৩। এবারে এই ফাংশন গুলো  কে আমরা Add Money  তে  রিপ্লেস করব।
 
 //৪। এবারে আমরা সেইম জিনিস টা রিক্যাপ করবো।  এবং ক্যাশ আউট ফিচার এ এটাকে আবার করে দেখাবো।
+
+//।৫। এবারে Transaction feature add করবো আমরা. প্রথমে বাটন ক্রিয়েট করবো এরপর কন্টেইনার  । check home.html
+//৫/ এবারে আমরা স্টুডেন্ট দের কে বোঝানোর চেষ্টা করবো  যে একটা জায়গায় অনেক গুলো বাটন এবং অনেক গুলো ফিচার আছে ।  ধরো কোন একটা বাটনে ক্লিক করলে শুধু ওই ফিচার টা ই শো হবে তাহলে কি করব।
+// প্রথম কাজ সকল ফিচার হাইড করে ফেলবো
+// এরপর যে খানে ক্লিক করা হইসে সেটা আমরা শো করবো। এবং একটা কমন ফাংশন ক্রিয়েট করবো।
+
+function showFeature(featureId) {
+  //প্রথমে সকল ফিচার হাইড করো
+  getElement("add-money-form").classList.add("hidden");
+  getElement("cash-out-form").classList.add("hidden");
+  getElement("cash-out-form").classList.add("hidden");
+  // যাকে শো করতে হবে তাকে শো করো
+  getElement(featureId).classList.remove("hidden");
+}
+//৫/ এবারে feature.js এ addmoney ,cashout এ আমরা এই ফাংশন ইমপ্লিমেন্ট করে দেখাবো।
+//৫/ এটা করার পাশাপাশি  home.html ২০ নাম্বার লাইনে  এ justify-start py-10 এড করে দিবো।
