@@ -23,6 +23,9 @@ getElement("btn-add-money").addEventListener("click", function (event) {
   //   const addMoneyNumber = parseFloat(addMoney);
   //   const pinNumber = document.getElementById("input-pin-number").value;
   const addMoneyNumber = getInputNumber("input-add-money");
+  if (isNaN(addMoneyNumber)) {
+    return alert("Your Input is not a Number");
+  }
   const pinNumber = getInputString("input-pin-number");
 
   // console.log(addMoney, pinNumber)
@@ -38,7 +41,7 @@ getElement("btn-add-money").addEventListener("click", function (event) {
     // update the DOM with updated balance
     document.getElementById("account-balance").innerText = newBalance;
 
-    // const transactionContainer = getElement("transactions");
+    const transactionContainer = getElement("transactions");
     // const p = document.createElement("p");
     // p.style.background = "white";
     // p.style.color = "black";
@@ -51,11 +54,11 @@ getElement("btn-add-money").addEventListener("click", function (event) {
     //   newBalance +
     //   " Tk";
     // //এখানে সব কিছু কনসোল করে দেখাতে হবে।
-    const p = `<p class="bg-white p-5 text-black">
+    const div = document.createElement("div");
+    div.innerHTML = `<p class="bg-white p-5 text-black">
     ${addMoneyNumber} Tk Added to your Account at ${new Date()}. current Balance is ${newBalance} Tk.
     </p>`;
-
-    transactionContainer.append(p);
+    transactionContainer.append(div);
   } else {
     alert("Failed to add money. Please try again later.");
   }

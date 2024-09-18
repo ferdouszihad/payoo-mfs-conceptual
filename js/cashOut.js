@@ -7,6 +7,9 @@ getElement("btn-cash-out").addEventListener("click", function (event) {
   //   const pinNumber = document.getElementById("input-cash-out-pin").value;
   //   console.log(cashOut, pinNumber);
   const cashOutNumber = getInputNumber("input-cash-out");
+  if (isNaN(cashOutNumber)) {
+    return alert("Your Input is not a Number");
+  }
   const pinNumber = getInputString("input-cash-out-pin");
 
   // wrong way to verify pin number
@@ -14,7 +17,7 @@ getElement("btn-cash-out").addEventListener("click", function (event) {
     // const balance = document.getElementById("account-balance").innerText;
     // const balanceNumber = parseFloat(balance);
     const balanceNumber = getElementNumber("account-balance");
-    
+
     if (cashOutNumber > balanceNumber) {
       alert("Natok Kom koro.  Karon Balance Kom");
       return;
@@ -26,11 +29,12 @@ getElement("btn-cash-out").addEventListener("click", function (event) {
     // update the ui
     document.getElementById("account-balance").innerText = newBalance;
 
-    const p = `<p class="bg-white p-5 text-black">
+    const transactionContainer = getElement("transactions");
+    const div = document.createElement("div");
+    div.innerHTML = `<p class="bg-white p-5 text-black">
     ${cashOutNumber} Tk Cash-out from  your Account at ${new Date()}. current Balance is ${newBalance} Tk.
     </p>`;
-
-    transactionContainer.append(p);
+    transactionContainer.append(div);
   } else {
     alert("Failed to cash out. Please try again later.");
   }

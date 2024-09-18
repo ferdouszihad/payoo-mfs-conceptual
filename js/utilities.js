@@ -56,4 +56,15 @@ function showFeature(featureId) {
 
 //৭।  এবারে স্টুডেন্ট দের কে টেমপ্লেট লিটারেল জিনিস টা সম্পর্কে আইডিয়া দিবেন  । এবং  addmoney.js line-40 এর সম্পুর্ন কোড টা template string দিয়ে ইমপ্লিমেন্ট করে দেখাবেন। student রা dom phase এ  template literal শিখতে পারলে তারা অনেক ডাইনামিক প্রোজেক্ট করতে পারবে।
 
+// code  change on both addmoney and cashout for innerHTML .  VIdeo -5
+
 //৮ এবারে সম্পুর্ন কাজ টা আবার রিক্যাপ করে দেখাবেন । এবং cashout Feature এ বাকী কাজ গুলো কে ইমপ্লিমেন্ট করবেন। এবং cashout যাতে মুল ব্যালেন্স এর থেকে বেশি না করতে পারে  সেটার জন্য আমরা  ভ্যালিডেশন করবো। check cashout.js line  - 18
+
+//৯ এবারে আমরা ইনপুট ভ্যালু নাম্বার কিনা তা চেক করার জন্য নাম্বার ইনপুট গুলি তে কোড লিখবো।  এবং নাম্বার না হলে এলার্ট দিয়ে রিটার্ন করিয়ে দেবো।
+//এর পাশাপাশি কিছু এরোর নিয়ে কথা বলবেন
+// - TypeError/segmentation Error : Cannot read properties of undefined reading x
+// Syntax error :  Variable is not defined
+// - TypeError : Assignment to const variable
+// - TypeError :  is not a function
+
+//10/ মডিউল সামারি তে স্টুডেন্ট দের কে রিচার্জ ফাংশনালিটি ইমপ্লিমেন্ট করা ,  পে বিল ফাংশনালিটি ইমপ্লিমেন্ট করার টাস্ক বুঝিয়ে দিবেন। । তারা নো মডিউল ডে তে এটা করে দেখবে।
