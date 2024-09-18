@@ -56,7 +56,7 @@ function showFeature(featureId) {
 
 //৭।  এবারে স্টুডেন্ট দের কে টেমপ্লেট লিটারেল জিনিস টা সম্পর্কে আইডিয়া দিবেন  । এবং  addmoney.js line-40 এর সম্পুর্ন কোড টা template string দিয়ে ইমপ্লিমেন্ট করে দেখাবেন। student রা dom phase এ  template literal শিখতে পারলে তারা অনেক ডাইনামিক প্রোজেক্ট করতে পারবে।
 
-// code  change on both addmoney and cashout for innerHTML .  VIdeo -5
+// code  change on both addmoney and cashout for innerHTML .  
 
 //৮ এবারে সম্পুর্ন কাজ টা আবার রিক্যাপ করে দেখাবেন । এবং cashout Feature এ বাকী কাজ গুলো কে ইমপ্লিমেন্ট করবেন। এবং cashout যাতে মুল ব্যালেন্স এর থেকে বেশি না করতে পারে  সেটার জন্য আমরা  ভ্যালিডেশন করবো। check cashout.js line  - 18
 
