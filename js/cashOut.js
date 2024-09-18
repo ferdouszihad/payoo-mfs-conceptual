@@ -14,12 +14,23 @@ getElement("btn-cash-out").addEventListener("click", function (event) {
     // const balance = document.getElementById("account-balance").innerText;
     // const balanceNumber = parseFloat(balance);
     const balanceNumber = getElementNumber("account-balance");
+    
+    if (cashOutNumber > balanceNumber) {
+      alert("Natok Kom koro.  Karon Balance Kom");
+      return;
+    }
 
     // reduce the balance
     const newBalance = balanceNumber - cashOutNumber;
 
     // update the ui
     document.getElementById("account-balance").innerText = newBalance;
+
+    const p = `<p class="bg-white p-5 text-black">
+    ${cashOutNumber} Tk Cash-out from  your Account at ${new Date()}. current Balance is ${newBalance} Tk.
+    </p>`;
+
+    transactionContainer.append(p);
   } else {
     alert("Failed to cash out. Please try again later.");
   }
