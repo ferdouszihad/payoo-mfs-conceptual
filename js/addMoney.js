@@ -19,20 +19,22 @@ getElement("btn-add-money").addEventListener("click", function (event) {
   console.log("added the event handler");
 
   // get money and the pin number
-  const addMoney = document.getElementById("input-add-money").value;
-  const addMoneyNumber = parseFloat(addMoney);
-  const pinNumber = document.getElementById("input-pin-number").value;
+  //   const addMoney = document.getElementById("input-add-money").value;
+  //   const addMoneyNumber = parseFloat(addMoney);
+  //   const pinNumber = document.getElementById("input-pin-number").value;
+  const addMoneyNumber = getInputNumber("input-add-money");
+  const pinNumber = getInputString("input-pin-number");
 
   // console.log(addMoney, pinNumber)
 
   if (pinNumber === "1234") {
     // add money to the account
-    const balance = document.getElementById("account-balance").innerText;
-    const balanceNumber = parseFloat(balance);
+    // const balance = document.getElementById("account-balance").innerText;
+    // const balanceNumber = parseFloat(balance);
+    const balanceNumber = getElementNumber("account-balance");
 
     // new balance
     const newBalance = balanceNumber + addMoneyNumber;
-
     // update the DOM with updated balance
     document.getElementById("account-balance").innerText = newBalance;
   } else {
