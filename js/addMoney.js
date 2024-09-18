@@ -37,6 +37,22 @@ getElement("btn-add-money").addEventListener("click", function (event) {
     const newBalance = balanceNumber + addMoneyNumber;
     // update the DOM with updated balance
     document.getElementById("account-balance").innerText = newBalance;
+
+    const transactionContainer = getElement("transactions");
+    const p = document.createElement("p");
+    p.style.background = "white";
+    p.style.color = "black";
+    p.style.padding = "20px";
+    p.innerHTML =
+      addMoneyNumber +
+      " Tk Added to your Account at " +
+      new Date() +
+      " current Balance is " +
+      newBalance +
+      " Tk";
+    //এখানে সব কিছু কনসোল করে দেখাতে হবে।
+
+    transactionContainer.append(p);
   } else {
     alert("Failed to add money. Please try again later.");
   }
